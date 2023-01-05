@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Rostyslav Vatrych
+      changes:
+        - createTable:
+            tableName: usernote
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_usernote_user_id
+                    references: user(id)
+              - column:
+                  name: note_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_usernote_note_id
+                    references: note(id)
+              - column:
+                  name: access
+                  type: "ENUM('OWNER', 'GUEST')"
+                  constraints:
+                    nullable: false

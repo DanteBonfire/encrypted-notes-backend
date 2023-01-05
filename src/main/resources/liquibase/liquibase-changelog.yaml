@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/patches/001-create-user-table.yaml
+  - include:
+      file: liquibase/patches/002-create-note-table.yaml
+  - include:
+      file: liquibase/patches/003-create-user-note-table.yaml
+  - include:
+      file: liquibase/patches/NotePreview.yaml

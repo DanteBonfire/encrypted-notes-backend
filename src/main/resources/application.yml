@@ -1,0 +1,17 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:/liquibase/liquibase-changelog.yaml
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/loli_land?useSSL=false
+    username: root
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  mvc:
+    path match:
+      matching-strategy: ANT_PATH_MATCHER

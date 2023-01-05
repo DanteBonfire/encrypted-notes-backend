@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  adminer:
+    image: adminer
+    restart: "no"
+    ports:
+      - "8081:8080"
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    command: --lower_case_table_names=0
+    restart: "no"
+    ports:
+      - 3306:3306
+    volumes:
+      - /home/dante/IdeaProjects/crypto/planner-local:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: loli_land
