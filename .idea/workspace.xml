@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e5545e-cd26-4050-901b-3cc9c082a87a" name="Changes" comment="fix value mapping">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/liquibase-changelog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/liquibase-changelog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/patches/NotePreview.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/patches/004-create-note-preview-table.yaml" afterDir="false" />
+    <list default="true" id="e2e5545e-cd26-4050-901b-3cc9c082a87a" name="Changes" comment="add unversioned files">
+      <change afterPath="$PROJECT_DIR$/planner-local/ca.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/planner-local/client-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/planner-local/mysql.sock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/planner-local/public_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/planner-local/server-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +130,7 @@
       <workItem from="1672919664117" duration="987000" />
       <workItem from="1672920664192" duration="24000" />
       <workItem from="1672920698066" duration="682000" />
-      <workItem from="1672921502899" duration="5170000" />
+      <workItem from="1672921502899" duration="5483000" />
     </task>
     <task id="LOCAL-00001" summary="creating project on gitHub">
       <created>1672926150486</created>
@@ -142,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672927016175</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix table name">
+      <created>1672927239289</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672927239289</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating project on gitHub" />
     <MESSAGE value="fix value mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix value mapping" />
+    <MESSAGE value="fix table name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix table name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
