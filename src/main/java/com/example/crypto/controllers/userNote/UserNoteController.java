@@ -47,21 +47,21 @@ public class UserNoteController {
             .collect(Collectors.toList());
     }
 
-    @GetMapping(value = "/{userNoteId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/getById/{userNoteId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public UserNoteResponse getUserNoteById(@PathVariable long userNoteId) throws UserNoteNotFoundException {
         return userNoteMapper.toResponse(
             userNoteService.getUserNoteById(userNoteId)
         );
     }
 
-    @GetMapping(value = "/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/getAllByUserId/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<UserNoteResponse>  getUserNotesByUserId(@PathVariable long userId) throws UserNoteNotFoundException, UserNotFoundException {
         return userNoteService.getUserNotesByUserId(userId).stream()
             .map(userNoteMapper::toResponse)
             .collect(Collectors.toList());
     }
 
-    @PutMapping(value = "/{userNoteId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/update/{userNoteId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public UserNoteResponse updateUserNote(@PathVariable long userNoteId, @RequestBody UserNoteRequest userNoteRequest) throws UserNoteNotFoundException {
         return  userNoteMapper.toResponse(
             userNoteService.updateUserNote(
@@ -70,7 +70,7 @@ public class UserNoteController {
         );
     }
 
-    @DeleteMapping(value = "/{userNoteId}")
+    @DeleteMapping(value = "/delete/{userNoteId}")
     public void deleteUserNote(@PathVariable long userNoteId){
         userNoteService.deleteUserNote(userNoteId);
     }
