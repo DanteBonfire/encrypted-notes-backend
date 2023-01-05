@@ -6,4 +6,4 @@ databaseChangeLog:
   - include:
       file: liquibase/patches/003-create-user-note-table.yaml
   - include:
-      file: liquibase/patches/NotePreview.yaml
+      file: liquibase/patches/004-create-note-preview-table.yaml
